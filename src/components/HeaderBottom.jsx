@@ -8,7 +8,7 @@ export const HeaderBottom = () => {
         Leader in the quality of outsourcing services
       </span>
       <img src={logoWhite} className="logo-header" alt="Devster Labs" />
-      <a href="/">
+      <a id="scroll-bottom" href="/">
         <img src={arrowIcon} className="arrowDown" alt="" />
         scroll
       </a>

@@ -6,7 +6,7 @@ export const Footer = () => {
     <div className="footer" style={{ color: "#fff" }}>
       <span className="privacy-txt">Privacy Policy</span>
       <img src={logoWhite} className="logo-header" alt="Devster Labs" />
-      <Button style={{fontSize: "0.6vw"}}></Button>
+      <Button></Button>
     </div>
   );
 };

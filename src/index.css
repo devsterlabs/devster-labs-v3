@@ -173,7 +173,7 @@
   align-items: center;
   justify-content: start;
   gap: 3rem;
-  color: #ddd;
+  color: #888;
   transition: 0.6s;
   cursor: pointer;
   text-transform: uppercase;
@@ -267,7 +267,7 @@ header {
 .container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #000;
   align-items: center;
   justify-content: center;
@@ -556,6 +556,7 @@ header {
   max-width: 1024px;
   gap: 22px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
 }
 
 .founder-item {
@@ -575,7 +576,6 @@ header {
 
 .founder-item .image-box {
   width: 100%;
-  height: 280px;
   max-height: 280px;
   overflow: hidden;
   background: linear-gradient(45deg, #000, #150d02);
@@ -688,7 +688,6 @@ header {
 
 .team-item .image-box {
   width: 100%;
-  height: 280px;
   max-height: 280px;
   overflow: hidden;
   background: linear-gradient(45deg, #000, #150d02);
@@ -788,4 +787,102 @@ header {
   color: #4cafc8;
   display: block;
   width: 100%;
+}
+
+.about .row {
+  margin-top: 52px;
+}
+
+@media screen and (max-width: 420px) {
+  .lang {
+    display: none;
+  }
+  #root
+    > div.benefits.container
+    > div.benefits-list
+    > div.subh-card
+    > div
+    > strong {
+    font-size: 2vw;
+  }
+  #root > div.benefits.container > div.benefits-list > div.subh-card > div {
+    padding: 10px;
+  }
+  .benefits-list .item .title,
+  .benefits-list .item .title .strong,
+  .benefits-list .item .num {
+    font-size: 3vw;
+  }
+  .footer{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .privacy-txt{
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 560px) {
+  .header-bottom {
+    flex-direction: column;
+  }
+  .header-bottom .text-left {
+    max-width: 100%;
+    text-align: center;
+  }
+  #scroll-bottom {
+    display: none;
+  }
+  .tagline {
+    font-size: 4vw;
+  }
+  .row-between {
+    flex-direction: column;
+  }
+  .row-between .row-comment img {
+    transform: rotate(90deg);
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .grid-container {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .row .heading {
+    font-size: 4vw;
+  }
+  .row .heading img {
+    width: 100%;
+  }
+  header {
+    background-color: #000;
+  }
+}
+@media screen and (max-width: 520px) {
+  .image-box {
+    /* height: auto; */
+    max-height: auto;
+  }
+  .founder-item {
+    height: auto;
+  }
+  .founder-item .name {
+    font-size: 5vw;
+  }
+  .founder-item .semi {
+    font-size: 3vw;
+  }
+  .team-item {
+    height: auto;
+  }
+  .team-item .name {
+    font-size: 5vw;
+  }
+  .team-item .semi {
+    font-size: 3vw;
+  }
+  .send-resume .row-comment {
+    text-align: center;
+  }
 }

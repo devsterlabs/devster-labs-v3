@@ -2,23 +2,11 @@ import { Button } from "./Button";
 import { Eyes } from "./Eyes";
 import arrowIcon from "../assets/images/arrow.svg";
 import { HeaderBottom } from "./HeaderBottom";
-import { useEffect, useState } from "react";
 
 export const Home = () => {
-  const [isAtTop, setIsAtTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <div className="home container" style={{ color: "#fff" }}>
+    <div className="home container" style={{ color: "#fff", minHeight: "100vh" }}>
       <Eyes />
       <span className="tagline">
         Gateway to pre-screened,{" "}
@@ -34,7 +22,7 @@ export const Home = () => {
           Apply now to get registered in our talent pool
         </span>
       </div>
-      {isAtTop && <HeaderBottom />}
+      <HeaderBottom />
     </div>
   );
 };
