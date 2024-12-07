@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { LocaleContext } from "../context/LocaleContext";
 
 export const Partners = () => {
   const [partners, setPartners] = useState([]);
+  const { t } = useContext(LocaleContext);
   const getPartners = async () => {
     const url = "https://devsterapi.vercel.app/client";
     const res = await fetch(url)
@@ -15,7 +17,7 @@ export const Partners = () => {
   return (
     <div className="partners container" style={{ color: "#fff" }}>
       <div className="row">
-        <span className="heading">Partners</span>
+        <span className="heading">{t("Partners")}</span>
       </div>
       <div className="partner-container">
         {partners &&

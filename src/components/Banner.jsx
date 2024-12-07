@@ -1,7 +1,10 @@
 import eyes from "../assets/images/eyes.png";
 import eyesBlack from "../assets/images/eyes-black.png";
+import { useContext } from "react";
+import { LocaleContext } from "../context/LocaleContext";
 
 export const Banner = () => {
+  const { t } = useContext(LocaleContext);
   return (
     <div className="banner">
       <div className="banner-white">
@@ -10,7 +13,7 @@ export const Banner = () => {
           .map((i) => (
             <>
               <img src={eyesBlack} alt="\/" />
-              <span className="banner-txt">VACANCIES</span>
+              <span className="banner-txt">{t("VACANCIES")}</span>
             </>
           ))}
       </div>
@@ -20,7 +23,7 @@ export const Banner = () => {
           .map((i) => (
             <>
               <img src={eyes} alt="\/" />
-              <span className="banner-txt">HIRING</span>
+              <span className="banner-txt">{t("HIRING")}</span>
             </>
           ))}
       </div>

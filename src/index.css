@@ -262,6 +262,7 @@ header {
 .lang {
   font-weight: bold;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .container {

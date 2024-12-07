@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { LocaleContext } from "../context/LocaleContext";
 
 export const Benefits = () => {
   // State to toggle visibility of the remaining items
   const [showAll, setShowAll] = useState(false);
+  const { t } = useContext(LocaleContext);
 
   // Array of benefit items
   const benefits = [
@@ -68,7 +70,7 @@ export const Benefits = () => {
   return (
     <div className="benefits container" style={{color: "#fff"}}>
       <div className="row">
-        <span className="heading">Why should you work with us?</span>
+        <span className="heading">{t("Why should you work with us?")}</span>
       </div>
       <div className="benefits-list">
         {/* Render first 4 items */}
@@ -76,8 +78,8 @@ export const Benefits = () => {
           <div className="item" key={index}>
             <div className="num">{benefit.num}.</div>
             <div className="title">
-              <span className="strong glitch">{benefit.title}</span>
-              {benefit.description}
+              <span className="strong glitch">{t(benefit.title)}</span>
+              {t(benefit.description)}
             </div>
           </div>
         ))}
@@ -88,8 +90,8 @@ export const Benefits = () => {
             <div className="item" key={index + 4}>
               <div className="num">{benefit.num}.</div>
               <div className="title">
-                <span className="strong glitch">{benefit.title}</span>
-                {benefit.description}
+                <span className="strong glitch">{t(benefit.title)}</span>
+                {t(benefit.description)}
               </div>
             </div>
           ))}
@@ -102,7 +104,7 @@ export const Benefits = () => {
             onClick={handleSeeAllClick}
           >
             <div className="txt16 semi upper">
-              <strong>View All Benefits</strong>
+              <strong>{t("View All Benefits")}</strong>
               <br />
             </div>
           </div>

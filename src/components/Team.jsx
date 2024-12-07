@@ -1,9 +1,11 @@
 import logoWhite from "../assets/images/logo-white.png";
+import { LocaleContext } from "../context/LocaleContext";
 import { Button } from "./Button";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const Team = () => {
   const [teams, setTeams] = useState([]);
+  const { t } = useContext(LocaleContext);
   const getTeams = async () => {
     const url = "https://devsterapi.vercel.app/team";
     const res = await fetch(url)
@@ -43,7 +45,7 @@ export const Team = () => {
                 <img src={image} width={"100%"} alt="" />
               </div>
               <span className="name">{name}</span>
-              <span className="txt18 semi op60">{position}</span>
+              <span className="txt18 semi op60">{t(position)}</span>
             </div>
           ))}
       </div>

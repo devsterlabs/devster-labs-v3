@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import arrowIcon from "../assets/images/arrow.svg";
+import { LocaleContext } from "../context/LocaleContext";
 
 export const SendResume = () => {
+  const { t } = useContext(LocaleContext);
   return (
-    <div className="send-resume container" style={{ color: "#fff", minHeight: "auto" }}>
+    <div
+      className="send-resume container"
+      style={{ color: "#fff", minHeight: "auto" }}
+    >
       <div className="row">
         <span className="row-comment">
           <img
@@ -11,10 +17,10 @@ export const SendResume = () => {
             className="arrow"
             style={{ transform: "rotate(-90deg)" }}
           />
-          Leave your contacts and our manager will contact you soon
+          {t("Leave your contacts and our manager will contact you soon")}
         </span>
         <span className="heading" style={{ fontSize: "3.5vw" }}>
-          waiting for you in our team
+          {t("waiting for you in our team")}
         </span>
       </div>
       <div className="row">
@@ -27,7 +33,7 @@ export const SendResume = () => {
             cursor: "pointer",
           }}
         >
-          Send resume
+          {t("Send resume")}
         </span>
       </div>
     </div>
