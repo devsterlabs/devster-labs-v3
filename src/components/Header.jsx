@@ -42,8 +42,8 @@ export const Header = () => {
       <div className="social">
           <a href="https://www.linkedin.com/company/devster-labs/" rel="noreferrer" target="_blank"><FaLinkedin /></a>
           <a href="https://www.xing.com/pages/devster-labs" rel="noreferrer" target="_blank"><FaXing /></a>
-          <a href="/" rel="noreferrer" target="_blank"><FaSquareXTwitter /></a>
-          <a href="/" rel="noreferrer" target="_blank"><FaInstagram /></a>
+          <a href="https://x.com/devsterLabs" rel="noreferrer" target="_blank"><FaSquareXTwitter /></a>
+          <a href="https://www.instagram.com/devsterlabs" rel="noreferrer" target="_blank"><FaInstagram /></a>
       </div>
     </header>
   );
