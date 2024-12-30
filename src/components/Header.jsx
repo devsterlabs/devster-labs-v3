@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import line from "../assets/images/line.png";
 import { LocaleContext } from "../context/LocaleContext";
+import { FaXing } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 export const Header = () => {
-  const { updateLang, t } = useContext(LocaleContext);
+  const { updateLang } = useContext(LocaleContext);
   return (
     <header>
       <div className="header-left" style={{ color: "#fff" }}>
@@ -35,7 +39,12 @@ export const Header = () => {
           DE
         </span>
       </div>
-      <span className="header-right">{t("Join the team")}</span>
+      <div className="social">
+          <a href="https://www.linkedin.com/company/devster-labs/" rel="noreferrer" target="_blank"><FaLinkedin /></a>
+          <a href="https://www.xing.com/pages/devster-labs" rel="noreferrer" target="_blank"><FaXing /></a>
+          <a href="/" rel="noreferrer" target="_blank"><FaSquareXTwitter /></a>
+          <a href="/" rel="noreferrer" target="_blank"><FaInstagram /></a>
+      </div>
     </header>
   );
 };

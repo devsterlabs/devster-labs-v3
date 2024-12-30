@@ -58,7 +58,7 @@ export const Benefits = () => {
     {
       num: 10,
       title: "24/7 Backup Availability",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      description: "Need a backup developer? We got you",
     },
   ];
 

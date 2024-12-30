@@ -56,5 +56,6 @@ export const de = {
   "Operational in Germany, United States and Pakistan (Now Expanding)": "In Deutschland, den USA und Pakistan aktiv (wird derzeit erweitert)",
   "3 countries": "3 Länder",
   "People in the talent pool": "Personen im Talentpool",
-  "Job Success Score": "Job-Erfolgs-Score"
+  "Job Success Score": "Job-Erfolgs-Score",
+  "Need a backup developer? We got you": "Brauchen Sie einen Backup-Entwickler? Wir haben ihn"
 };
