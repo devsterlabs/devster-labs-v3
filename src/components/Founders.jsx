@@ -1,5 +1,4 @@
 import logoWhite from "../assets/images/logo-white.png";
-import { Button } from "./Button";
 import AbdulRaheem from "../assets/images/AbdulRaheem.png";
 import Sara from "../assets/images/SaraRashid.png";
 import { useContext } from "react";
@@ -40,7 +39,6 @@ export const Founders = () => {
           </span>
         </div>
       </div>
-      <Button />
     </div>
   );
 };

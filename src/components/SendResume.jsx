@@ -25,6 +25,9 @@ export const SendResume = () => {
       </div>
       <div className="row">
         <span
+          onClick={() => {
+            window.open("https://devsterlabs.com/apply");
+          }}
           className="heading glitch xl-heading"
           style={{
             textDecoration: "underline",
