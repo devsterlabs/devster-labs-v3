@@ -68,7 +68,7 @@ export const Benefits = () => {
   };
 
   return (
-    <div className="benefits container" style={{color: "#fff"}}>
+    <div className="benefits container" style={{ color: "#fff" }}>
       <div className="row">
         <span className="heading">{t("Why should you work with us?")}</span>
       </div>
@@ -103,7 +103,7 @@ export const Benefits = () => {
             className="subh-card"
             onClick={handleSeeAllClick}
           >
-            <div className="txt16 semi upper">
+            <div className="txt17 semi upper">
               <strong>{t("View All Benefits")}</strong>
               <br />
             </div>

@@ -30,7 +30,6 @@ export const Team = () => {
           </span>{" "}
           <img
             src={logoWhite}
-            width={"320px"}
             style={{ marginBottom: "8px" }}
             className="logo-header"
             alt="Devster Labs"

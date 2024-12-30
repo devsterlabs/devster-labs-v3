@@ -11,10 +11,12 @@ export const HeaderBottom = () => {
         {t("Leader in the quality of outsourcing services")}
       </span>
       <img src={logoWhite} className="logo-header" alt="Devster Labs" />
-      <a id="scroll-bottom" href="/">
+      <span className="scroll" id="scroll-bottom" onClick={() => {
+        document.getElementById("about").scrollIntoView({behavior: "smooth"})
+      }}>
         <img src={arrowIcon} className="arrowDown" alt="" />
         {t("scroll")}
-      </a>
+      </span>
     </div>
   );
 };

@@ -8,18 +8,16 @@ import { LocaleContext } from "../context/LocaleContext";
 export const Founders = () => {
   const { t } = useContext(LocaleContext);
   return (
-    <div className="founders container" style={{ color: "#fff" }}>
+    <div
+      className="founders container"
+      style={{ color: "#fff", minHeight: "auto", height: "auto" }}
+    >
       <div className="row" style={{ justifyContent: "center" }}>
         <span className="heading" style={{ textAlign: "center" }}>
           <span className="heading" style={{ color: "#4cafc8" }}>
             {t("Founders of")}
           </span>{" "}
-          <img
-            src={logoWhite}
-            width={"320px"}
-            className="logo-header"
-            alt="Devster Labs"
-          />
+          <img src={logoWhite} className="logo-header" alt="Devster Labs" />
         </span>
       </div>
       <div className="founder-container">

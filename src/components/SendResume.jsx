@@ -19,15 +19,14 @@ export const SendResume = () => {
           />
           {t("Leave your contacts and our manager will contact you soon")}
         </span>
-        <span className="heading" style={{ fontSize: "3.5vw" }}>
+        <span className="heading xl-heading">
           {t("waiting for you in our team")}
         </span>
       </div>
       <div className="row">
         <span
-          className="heading glitch"
+          className="heading glitch xl-heading"
           style={{
-            fontSize: "3.5vw",
             textDecoration: "underline",
             color: "#4cafc8",
             cursor: "pointer",
