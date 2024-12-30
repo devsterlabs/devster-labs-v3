@@ -662,7 +662,7 @@ header {
   justify-content: flex-start; /* Changed 'start' to 'flex-start' for correctness */
   color: #fff;
   width: 100%; /* Combined min-width and max-width for better responsiveness */
-  max-width: 1024px;
+  /* max-width: 1024px; */
   gap: 22px;
   margin-bottom: 32px;
   padding: 2vw;
