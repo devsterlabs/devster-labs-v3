@@ -5,7 +5,7 @@ import { LocaleContext } from "../context/LocaleContext";
 import { PrivacyModal } from "./PrivacyModal";
 
 export const Footer = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const { t } = useContext(LocaleContext);
   return (
     <div className="footer" style={{ color: "#fff" }}>
