@@ -4,6 +4,7 @@ import arrowIcon from "../assets/images/arrow.svg";
 import { HeaderBottom } from "./HeaderBottom";
 import { useContext, useEffect, useRef } from "react";
 import { LocaleContext } from "../context/LocaleContext";
+import { HireUs } from "./HireUs";
 
 export const Home = () => {
   const homeRef = useRef(null); // Ensure ref is initialized as null
@@ -63,10 +64,10 @@ export const Home = () => {
         {t("software developers")}
       </span>
       <div className="row-between">
-        <Button />
+        <HireUs />
         <span className="row-comment">
           <img src={arrowIcon} alt="->" className="arrow" />
-          {t("Apply now to get registered in our talent pool")}
+          {t("Want to hire us? Schedule a 30-minutes call now")}
         </span>
       </div>
       <HeaderBottom id={"about"} />

@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import logoWhite from "../assets/images/logo-white.png";
-import { Button } from "./Button";
 import { LocaleContext } from "../context/LocaleContext";
 import { PrivacyModal } from "./PrivacyModal";
+import { HireUs } from "./HireUs";
 
 export const Footer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ export const Footer = () => {
       </span>
       {isOpen && <PrivacyModal setIsOpen={setIsOpen} />}
       <img src={logoWhite} className="logo-header" alt="Devster Labs" />
-      <Button></Button>
+      <HireUs />
     </div>
   );
 };

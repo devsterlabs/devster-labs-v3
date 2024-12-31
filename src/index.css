@@ -125,6 +125,10 @@
   position: absolute;
   bottom: 34%;
   right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
 }
 
 .btn-container {
@@ -152,6 +156,34 @@
 .btn-container button:hover {
   background-color: black;
   color: #fff;
+  transition: 0.6s;
+}
+
+.btn-container-black {
+  position: relative;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container-black button {
+  position: relative;
+  background: #000;
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.6s;
+  font-size: var(--btn-txt-size);
+  text-transform: uppercase;
+}
+
+.btn-container-black button:hover {
+  background-color: fff;
+  color: #000;
   transition: 0.6s;
 }
 
@@ -740,6 +772,8 @@ header {
   background: linear-gradient(45deg, #1c1c1c, #1c1c1c, #130124);
   border-radius: 5px;
   gap: 6px;
+  text-decoration: none;
+  color: #fff;
 }
 
 @media screen and (max-width: 430px) {
@@ -1063,4 +1097,27 @@ header {
   right: 0;
   padding: 12px;
   font-size: 18px;
+}
+
+
+/* Custom scrollbar for modern browsers */
+*::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #000; /* Background of the track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #4CAFC8; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded edges */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #3793A6; /* Darker color for hover effect */
+}
+
+*::-moz-scrollbar {
+  width: 10px; /* Width of the scrollbar for Firefox */
 }
