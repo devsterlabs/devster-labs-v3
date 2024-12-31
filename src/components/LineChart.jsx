@@ -122,7 +122,7 @@ const LineChart = () => {
         <div
           style={{
             width: "100%",
-            maxWidth: "800px",
+            maxWidth: "1024px",
             height: "60vh", // Responsive height
           }}
         >

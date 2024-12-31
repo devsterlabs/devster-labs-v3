@@ -252,6 +252,7 @@ header {
   gap: 8px;
   padding: 16px;
   cursor: pointer;
+  min-width: 65px;
 }
 
 .menu-icon #line1 {
