@@ -3,7 +3,7 @@ import arrowIcon from "../assets/images/arrow.svg";
 import logoWhite from "../assets/images/logo-white.png";
 import { LocaleContext } from "../context/LocaleContext";
 
-export const HeaderBottom = () => {
+export const HeaderBottom = ({id}) => {
   const { t } = useContext(LocaleContext);
   return (
     <div className="header-bottom" style={{ color: "#fff" }}>
@@ -12,7 +12,7 @@ export const HeaderBottom = () => {
       </span>
       <img src={logoWhite} className="logo-header" alt="Devster Labs" />
       <span className="scroll" id="scroll-bottom" onClick={() => {
-        document.getElementById("about").scrollIntoView({behavior: "smooth"})
+        document.getElementById(id).scrollIntoView({behavior: "smooth"})
       }}>
         <img src={arrowIcon} className="arrowDown" alt="" />
         {t("scroll")}

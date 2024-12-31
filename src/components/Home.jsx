@@ -69,7 +69,7 @@ export const Home = () => {
           {t("Apply now to get registered in our talent pool")}
         </span>
       </div>
-      <HeaderBottom />
+      <HeaderBottom id={"about"} />
     </div>
   );
 };

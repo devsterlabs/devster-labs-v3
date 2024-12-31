@@ -9,3 +9,4 @@ export * from "./Team";
 export * from "./SendResume";
 export * from "./Footer";
 export * from "./Banner";
+export * from "./TeamTop";

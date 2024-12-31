@@ -17,7 +17,7 @@ export const Team = () => {
     getTeams();
   }, []);
   return (
-    <div className="teams container" style={{ color: "#fff" }}>
+    <div id="teams" className="teams container" style={{ color: "#fff" }}>
       <div className="row" style={{ justifyContent: "center" }}>
         <span
           className="heading"

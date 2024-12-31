@@ -1,22 +1,16 @@
 import React from "react";
-import { About, Banner, Benefits, Footer, Founders, Header, Home, Partners, SendResume, SideNav, Team } from "./components";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { TeamPage } from "./pages/TeamPage";
+import { PricingPage } from "./pages/PricingPage";
 
 function App() {
   return (
-    <>
-    <div className="bg"></div>
-    <SideNav />
-    <Header />
-    <Home />
-    <About />
-    <Benefits />
-    <Founders />
-    <Partners />
-    <Team />
-    <Banner />
-    <SendResume />
-    <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/team" element={<TeamPage />} />
+      <Route path="/pricing" element={<PricingPage />} />
+    </Routes>
   );
 }
 
