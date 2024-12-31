@@ -11,7 +11,7 @@ export const HomePage = () => {
 
       
       {/* <BarChart /> */}
-      <PieChart3D />
+      {/* <PieChart3D /> */}
 
       <Partners />
     </Layout>
