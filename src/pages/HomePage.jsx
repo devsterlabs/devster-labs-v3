@@ -1,6 +1,6 @@
 import { About, Benefits, Founders, Home, Partners } from "../components";
 import { Layout } from "../components/Layout";
-import LineChart from "../components/LineChart";
+import { PieChart3D } from "../components/PieChart3D";
 export const HomePage = () => {
   return (
     <Layout>
@@ -10,7 +10,8 @@ export const HomePage = () => {
       <Founders />
 
       
-      <LineChart />
+      {/* <BarChart /> */}
+      <PieChart3D />
 
       <Partners />
     </Layout>

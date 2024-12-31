@@ -306,8 +306,9 @@ header {
 }
 
 .eyes {
-  animation: blurAnimation 2s infinite alternate ease-in-out;
+  /* animation: blurAnimation 2s infinite alternate ease-in-out; */
   transform-style: preserve-3d;
+  filter: blur(5px);
 }
 
 @keyframes blurAnimation {
