@@ -6,7 +6,12 @@ export const Menu = () => {
   const { t } = useContext(LocaleContext);
   return (
     <div className="menu">
-      <Link to={"/"} className="item" style={{ transform: "skewY(-6deg)" }}>
+      <Link
+        onClick={() => document.getElementById("openNav").click()}
+        to={"/"}
+        className="item"
+        style={{ transform: "skewY(-6deg)" }}
+      >
         <span className="num">01</span>
         <span className="title">{t("Home")}</span>
       </Link>
@@ -14,11 +19,21 @@ export const Menu = () => {
         <span className="num">02</span>
         <span className="title">{t("Pricing")}</span>
       </Link> */}
-      <Link to={"/team"} className="item" style={{ transform: "skewY(0deg)" }}>
+      <Link
+        onClick={() => document.getElementById("openNav").click()}
+        to={"/team"}
+        className="item"
+        style={{ transform: "skewY(0deg)" }}
+      >
         <span className="num">02</span>
         <span className="title">{t("Team")}</span>
       </Link>
-      <Link to={"/career"} className="item" style={{ transform: "skewY(6deg)" }}>
+      <Link
+        onClick={() => document.getElementById("openNav").click()}
+        to={"/career"}
+        className="item"
+        style={{ transform: "skewY(6deg)" }}
+      >
         <span className="num">03</span>
         <span className="title">{t("Career")}</span>
       </Link>

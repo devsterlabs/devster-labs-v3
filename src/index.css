@@ -136,7 +136,8 @@
   padding: 8px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .btn-container button {
@@ -154,6 +155,27 @@
 }
 
 .btn-container button:hover {
+  background-color: black;
+  color: #fff;
+  transition: 0.6s;
+}
+
+.btn-container a {
+  position: relative;
+  background: #4cafc8;
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  transition: 0.6s;
+  font-size: var(--btn-txt-size);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn-container a:hover {
   background-color: black;
   color: #fff;
   transition: 0.6s;
@@ -745,12 +767,25 @@ header {
   filter: none;
 }
 
-
 .team-container {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
     minmax(280px, 1fr)
+  ); /* Responsive columns */
+  gap: 22px; /* Space between grid items */
+  justify-content: center; /* Center the grid */
+  color: #fff;
+  width: 100%;
+  max-width: 1024px;
+  margin-bottom: 32px;
+}
+
+.career-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(100%, 1fr)
   ); /* Responsive columns */
   gap: 22px; /* Space between grid items */
   justify-content: center; /* Center the grid */
@@ -1041,20 +1076,20 @@ header {
   font-size: clamp(16px, 4vw, 52px);
 }
 
-.social{
+.social {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
 
-.social a{
+.social a {
   color: white;
   text-decoration: none;
   font-size: clamp(16px, 1.4vw, 20px);
 }
 
-.privacy-full-wrapper{
+.privacy-full-wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -1067,7 +1102,7 @@ header {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.privacy-container{
+.privacy-container {
   position: relative;
   width: 100%;
   max-width: 300px;
@@ -1087,18 +1122,17 @@ header {
   overflow-y: scroll;
 }
 
-.privacy-container hr{
+.privacy-container hr {
   width: 100%;
 }
 
-.privacy-close{
+.privacy-close {
   position: absolute;
   top: 0;
   right: 0;
   padding: 12px;
   font-size: 18px;
 }
-
 
 /* Custom scrollbar for modern browsers */
 *::-webkit-scrollbar {
@@ -1110,14 +1144,53 @@ header {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #4CAFC8; /* Color of the scrollbar thumb */
+  background: #4cafc8; /* Color of the scrollbar thumb */
   border-radius: 5px; /* Rounded edges */
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #3793A6; /* Darker color for hover effect */
+  background: #3793a6; /* Darker color for hover effect */
 }
 
 *::-moz-scrollbar {
   width: 10px; /* Width of the scrollbar for Firefox */
+}
+
+.sideHire {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 99;
+}
+
+.sideButton {
+  background-color: #4cafc8;
+  border: none;
+  height: 30px;
+  min-width: 120px;
+  display: block;
+  font-weight: bold;
+  color: #fff;
+  font-family: "HeadingFont";
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-tlb {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-brb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(-90deg);
 }

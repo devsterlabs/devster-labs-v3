@@ -1,6 +1,6 @@
 import topLeftBlack from "../assets/images/topLeftButtonBlack.svg";
-import topLeftWhite from "../assets/images/topLeftButtonWhite.svg";
 import bottomRightBlack from "../assets/images/bottomRightButtonBlack.svg";
+import topLeftWhite from "../assets/images/topLeftButtonWhite.svg";
 import bottomRightWhite from "../assets/images/bottomRightButtonWhite.svg";
 import { useContext } from "react";
 import { LocaleContext } from "../context/LocaleContext";

@@ -1,6 +1,6 @@
 import { About, Benefits, Founders, Home, Partners } from "../components";
+import { HireUsSide } from "../components/HireUsSide";
 import { Layout } from "../components/Layout";
-import { PieChart3D } from "../components/PieChart3D";
 export const HomePage = () => {
   return (
     <Layout>
@@ -12,8 +12,8 @@ export const HomePage = () => {
       
       {/* <BarChart /> */}
       {/* <PieChart3D /> */}
-
       <Partners />
+      <HireUsSide />
     </Layout>
   );
 };

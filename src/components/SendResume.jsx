@@ -17,7 +17,7 @@ export const SendResume = () => {
             className="arrow"
             style={{ transform: "rotate(-90deg)" }}
           />
-          {t("Leave your contacts and our manager will contact you soon")}
+          {t("Leave your CV and our manager will contact you soon")}
         </span>
         <span className="heading xl-heading">
           {t("waiting for you in our team")}

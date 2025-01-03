@@ -1,11 +1,80 @@
 import { Link } from "react-router-dom";
 import logoWhite from "../assets/images/logo-white.png";
-import { LocaleContext } from "../context/LocaleContext";
 import { Button } from "./Button";
-import { useContext, useEffect, useState } from "react";
-import { JD } from "./JD";
+import JobModalCSS from "./JobModal.module.css";
+import { useState } from "react";
+
+const JobModal = ({ isOpen, onClose, job }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className={JobModalCSS.modalOverlay}>
+      <div className={JobModalCSS.modalContent}>
+        <button className={JobModalCSS.closeButton} onClick={onClose}>
+          &times;
+        </button>
+        <h2>{job.title}</h2>
+        <p>
+          <strong>Experience:</strong> {job.experience} years
+        </p>
+        <p>
+          <strong>Location:</strong> {job.location}
+        </p>
+        <h2 style={{ marginTop: "20px" }}>Description:</h2>
+        <div
+          dangerouslySetInnerHTML={{ __html: job.description }}
+          style={{ textAlign: "left" }} // Optional styling
+          className={JobModalCSS.description}
+        />
+        <button
+          onClick={() => {
+            window.open("https://apply.devsterlabs.com");
+          }}
+          className={JobModalCSS.applyButton}
+        >
+          Apply Now
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export const Career = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState({});
+  const openJob = (id) => {
+    const job = jobs.filter((job) => job.id === id)[0];
+    console.log(job);
+    setSelectedJob({ ...job });
+    setIsOpen(true);
+  };
+  const jobs = [
+    {
+      title: "Data Scientist",
+      experience: "5+ years",
+      location: "Remote",
+      id: "1",
+      description:
+        "<p>We are looking for an experienced <strong>Data Scientist</strong> to join our team. Your responsibilities include:</p><ul><li>Analyzing large datasets</li><li>Building predictive models</li><li>Collaborating with cross-functional teams</li></ul>",
+    },
+    {
+      title: "React Native Developer",
+      experience: "5+ years",
+      location: "Islamabad, PK",
+      id: "2",
+      description:
+        "<p>As a <strong>React Native Developer</strong>, you will:</p><ul><li>Develop mobile applications</li><li>Work with cross-platform frameworks</li><li>Ensure app performance and stability</li></ul>",
+    },
+    {
+      title: "Data Annotator",
+      experience: "1 year",
+      location: "Remote",
+      id: "3",
+      description:
+        "<p>Join us as a <strong>Data Annotator</strong> to:</p><ul><li>Label and classify datasets</li><li>Work remotely</li><li>Contribute to AI projects</li></ul>",
+    },
+  ];
+
   return (
     <div id="teams" className="teams container" style={{ color: "#fff" }}>
       <div className="row" style={{ justifyContent: "center" }}>
@@ -26,171 +95,39 @@ export const Career = () => {
           />
         </span>
       </div>
-      <div className="team-container">
-        <div className="team-item">
-          <span className="name">Data Scientist</span>
-          <span className="txt18 semi op60">Experience: 5+ years</span>
-          <span className="txt18 semi op60">Location: Remote</span>
-          <hr style={{ width: "100%" }} />
-          <JD
-            desc={`
-    <p>
-      We are a forward-thinking organization dedicated to leveraging
-      data-driven insights to solve complex business challenges. As a
-      remote-first company, we prioritize flexibility, collaboration, and
-      innovation, offering opportunities to work on exciting projects with
-      a global team.
-    </p>
-
-    <h2>Job Summary</h2>
-    <p>
-      We are seeking an experienced Data Scientist with 5+ years of
-      expertise to join our dynamic team. The ideal candidate will have a
-      strong background in statistical analysis, machine learning, and
-      data visualization, with a proven ability to translate complex data
-      into actionable insights.
-    </p>
-
-    <h2>Key Responsibilities</h2>
-    <ul>
-      <li>
-        Analyze large and complex datasets to identify trends, patterns,
-        and actionable insights.
-      </li>
-      <li>
-        Design and implement predictive models and machine learning
-        algorithms to solve real-world problems.
-      </li>
-      <li>
-        Collaborate with cross-functional teams to define business
-        challenges and develop data-driven solutions.
-      </li>
-      <li>
-        Develop and maintain scalable data pipelines and systems for data
-        processing and analysis.
-      </li>
-      <li>
-        Create intuitive visualizations and dashboards to communicate
-        findings to stakeholders.
-      </li>
-      <li>
-        Stay updated with the latest trends and advancements in data
-        science and machine learning.
-      </li>
-      <li>
-        Ensure data integrity and maintain best practices for data privacy
-        and security.
-      </li>
-    </ul>
-  `}
-          />
-        </div>
-        <div className="team-item">
-          <span className="name">React Native Developer</span>
-          <span className="txt18 semi op60">Experience: 5+ years</span>
-          <span className="txt18 semi op60">Location: Islamabad, PK</span>
-          <hr style={{ width: "100%" }} />
-          <JD
-            desc={`<p>
-  We are an innovative organization committed to building world-class
-  mobile applications that deliver exceptional user experiences. Based in
-  Islamabad, Pakistan, we foster a culture of collaboration, creativity, and
-  growth. Join our dynamic team to work on exciting projects and cutting-edge
-  technologies.
-</p>
-
-<h2>Job Summary</h2>
-<p>
-  We are seeking a highly experienced React Native Developer with 5+ years of
-  expertise in developing high-performance, cross-platform mobile applications.
-  The ideal candidate will have a deep understanding of mobile app development,
-  proficiency in React Native, and a passion for delivering top-notch products
-  to global clients.
-</p>
-
-<h2>Key Responsibilities</h2>
-<ul>
-  <li>
-    Develop and maintain robust, scalable, and user-friendly mobile applications
-    using React Native.
-  </li>
-  <li>
-    Collaborate with cross-functional teams, including designers and backend
-    developers, to create seamless and visually appealing user interfaces.
-  </li>
-  <li>
-    Optimize applications for maximum performance and scalability across iOS and
-    Android platforms.
-  </li>
-  <li>
-    Debug and resolve technical issues, ensuring smooth application performance.
-  </li>
-  <li>
-    Stay updated with the latest trends and advancements in React Native and
-    mobile development technologies.
-  </li>
-  <li>
-    Integrate third-party libraries and APIs to enhance application
-    functionality.
-  </li>
-  <li>
-    Participate in code reviews and maintain high standards of code quality and
-    documentation.
-  </li>
-</ul>
-
-<h2>Qualifications</h2>
-<ul>
-  <li>
-    Bachelor’s or Master’s degree in Computer Science, Software Engineering, or
-    a related field.
-  </li>
-  <li>
-    5+ years of hands-on experience in mobile application development with at
-    least 3 years in React Native.
-  </li>
-  <li>
-    Proficiency in JavaScript, TypeScript, and related tools like Redux and
-    MobX.
-  </li>
-  <li>
-    Strong understanding of RESTful APIs, GraphQL, and third-party integration.
-  </li>
-  <li>
-    Experience with native mobile development (Java/Kotlin for Android and
-    Swift/Objective-C for iOS) is a plus.
-  </li>
-  <li>
-    Familiarity with CI/CD pipelines and version control systems like Git.
-  </li>
-  <li>
-    Excellent problem-solving and debugging skills, with a strong focus on
-    performance optimization.
-  </li>
-  <li>
-    Ability to work independently and collaboratively in a fast-paced
-    environment.
-  </li>
-</ul>
-
-<h2>What We Offer</h2>
-<ul>
-  <li>
-    Competitive salary and benefits package, including performance-based
-    incentives.
-  </li>
-  <li>Opportunities to work on challenging and innovative projects.</li>
-  <li>
-    A collaborative and inclusive work environment that fosters growth and
-    learning.
-  </li>
-  <li>Professional development and training opportunities.</li>
-  <li>Modern office facilities in the heart of Islamabad, Pakistan.</li>
-</ul>`}
-          />
-        </div>
+      <div className="career-container">
+        {jobs.map((job, index) => (
+          <div className="team-item" key={job.id}>
+            <span className="name">{job.title}</span>
+            <span className="txt18 semi op60">
+              Experience: {job.experience}
+            </span>
+            <span className="txt18 semi op60">Location: {job.location}</span>
+            <hr style={{ width: "100%" }} />
+            <div className="btn-container">
+              <span className="txt18 semi op60" style={{ color: "#fff" }}>
+                Posted: 05/01/2025
+              </span>
+              <Link
+                to={"/career?id=" + job.id}
+                onClick={() => {
+                  openJob(job.id.toString());
+                }}
+              >
+                View Job Details
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
       <Button />
+      <JobModal
+        isOpen={isOpen}
+        onClose={() => {
+          setIsOpen(!isOpen);
+        }}
+        job={selectedJob}
+      />
     </div>
   );
 };

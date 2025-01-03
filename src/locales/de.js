@@ -12,8 +12,8 @@ export const de = {
   "The most trusted": "Der vertrauenswürdigste",
   "outsourcing partner in Pakistan": "Outsourcing-Partner in Pakistan",
   "waiting for you in our team": "erwartet Sie in unserem Team",
-  "Leave your contacts and our manager will contact you soon":
-    "Hinterlassen Sie Ihre Kontaktdaten und unser Manager wird Sie in Kürze kontaktieren",
+  "Leave your CV and our manager will contact you soon":
+    "Hinterlassen Sie Ihren Lebenslauf und unser Manager wird Sie in Kürze kontaktieren",
   "Send resume": "Lebenslauf senden",
   "Privacy Policy": "Datenschutzrichtlinie",
   HIRING: "HIRING",

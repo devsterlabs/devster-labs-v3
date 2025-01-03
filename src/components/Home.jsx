@@ -1,4 +1,3 @@
-import { Button } from "./Button";
 import { Eyes } from "./Eyes";
 import arrowIcon from "../assets/images/arrow.svg";
 import { HeaderBottom } from "./HeaderBottom";
