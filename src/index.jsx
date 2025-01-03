@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import { LocaleProvider } from "./context/LocaleContext";
 import { BrowserRouter } from "react-router-dom";
+// eslint-disable-next-line
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
