@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 
 export const Menu = () => {
   const { t } = useContext(LocaleContext);
+  const onLinkClick = () => {
+    document.getElementById("openNav").click();
+    window.scrollTo(0, 0);
+  }
   return (
     <div className="menu">
       <Link
-        onClick={() => document.getElementById("openNav").click()}
+        onClick={onLinkClick}
         to={"/"}
         className="item"
         style={{ transform: "skewY(-6deg)" }}
@@ -20,7 +24,7 @@ export const Menu = () => {
         <span className="title">{t("Pricing")}</span>
       </Link> */}
       <Link
-        onClick={() => document.getElementById("openNav").click()}
+        onClick={onLinkClick}
         to={"/team"}
         className="item"
         style={{ transform: "skewY(0deg)" }}
@@ -29,7 +33,7 @@ export const Menu = () => {
         <span className="title">{t("Team")}</span>
       </Link>
       <Link
-        onClick={() => document.getElementById("openNav").click()}
+        onClick={onLinkClick}
         to={"/career"}
         className="item"
         style={{ transform: "skewY(6deg)" }}

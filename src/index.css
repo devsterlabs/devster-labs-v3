@@ -834,7 +834,7 @@ header {
 
 .team-item .name {
   font-family: HeadingFont;
-  font-size: 1vw;
+  font-size: clamp(12px, 1vw, 18px);
 }
 
 .footer {
