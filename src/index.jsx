@@ -14,6 +14,7 @@ root.render(
     <BrowserRouter>
       <LocaleProvider>
         <App />
+        <SpeedInsights />
       </LocaleProvider>
     </BrowserRouter>
   </React.StrictMode>
